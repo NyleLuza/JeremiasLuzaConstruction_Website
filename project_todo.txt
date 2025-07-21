@@ -1,5 +1,5 @@
 Project TODO:
 - Gather Requirements
-- Setup Jira Workflow
-- Setup Working Environment
-- Setup Github
+- Setup Jira Workflow *
+- Setup Working Environment *
+- Setup Github *
