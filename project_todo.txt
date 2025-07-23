@@ -3,3 +3,10 @@ Project TODO:
 - Setup Jira Workflow *
 - Setup Working Environment *
 - Setup Github *
+
+Colors used:
+OffWhite: #F5F5F5
+Blue: #40509d
+
+ideas for body of webpage:
+- 2 panel view, left hand side is a drone shot going through the houses, right side being a slideshow of quotes from past customers.
