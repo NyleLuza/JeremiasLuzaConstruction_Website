@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="d-flex flex-column justify-content-center h-100">
+    <div className="d-flex flex-column h-100">
       <Navbar />
       <p className="d-flex">
           <p>Lorsdemdf</p>
