@@ -1,4 +1,5 @@
 import logo from './logos/logo3rev.png'
+import Button from './button/Button'
 
 function Navbar(){
 return(
@@ -7,9 +8,9 @@ return(
         <img src={logo}/>
       </div>
       <div className='d-flex justify-content-end flex-grow-1 gap-3'>
-        <button>Home</button>
-        <button>About</button>
-        <button>Contact</button>
+        <Button label="Home"/>
+        <Button label="About"/>
+        <Button label="Contact"/>
       </div>
     </nav>
 );
