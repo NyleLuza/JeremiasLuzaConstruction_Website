@@ -1,6 +1,6 @@
 function Navbar(){
 return(
-    <nav className="flex-grow-1">
+    <nav className="d-flex">
         <h1>
           Jeremias Luza Construction
         </h1>
