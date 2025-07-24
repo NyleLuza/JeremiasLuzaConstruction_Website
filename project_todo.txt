@@ -1,8 +1,5 @@
-Project TODO:
-- Gather Requirements
-- Setup Jira Workflow *
-- Setup Working Environment *
-- Setup Github *
+What to work on next:
+Contact info
 
 Colors used:
 OffWhite: #F5F5F5
