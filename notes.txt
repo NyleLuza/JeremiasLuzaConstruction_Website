@@ -1,0 +1,5 @@
+React Notes:
+Image was affecting the size of the nav and footer bar.
+Solution: adjust the body container to 100% width and height and set object-fit to cover.
+	- Object fit ensures that the container is filled and crops when needed. Basically just scales the image to the size of the 	container
+	- Applying 100% to width and Height makes the image fit to the size of its parent container
