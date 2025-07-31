@@ -1,15 +1,15 @@
-import logo from './logo.svg';
 import Navbar from './components/Navbar'
+import img from './imgs/house1.jpg'
 import './App.css';
 
 function App() {
   return (
-    <div className="d-flex flex-column h-100">
+    <div className="d-flex flex-grow-1 flex-column h-100">
       <Navbar />
-      <p className="d-flex flex-grow-1">
-          <p>Lorsdemdf</p>
-      </p>
-      <footer className="d-flex">
+      <div className="d-flex flex-grow-1">
+          <img src={img} alt="Example"/>
+      </div>
+      <footer className="d-flex flex-grow-1">
         This is the footer
       </footer>
     </div>
