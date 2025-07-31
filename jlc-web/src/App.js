@@ -9,9 +9,7 @@ function App() {
     <div className="d-flex flex-grow-1 flex-column h-100">
       <Navbar />
       <Main />
-      <footer className="d-flex flex-grow-1">
-        This is the footer
-      </footer>
+      <Footer />
     </div>
   );
 }

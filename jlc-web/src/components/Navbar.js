@@ -3,7 +3,7 @@ import Button from './button/Button'
 
 function Navbar(){
 return(
-    <nav className="d-flex align-items-center justify-content-between px-5" style={{ height: "60px", backgroundColor: '#40509d' }}>
+    <nav className="d-flex align-items-center justify-content-between px-5" style={{ minHeight: "60px", backgroundColor: '#40509d' }}>
       <div className='d-flex'>
         <img src={logo}/>
       </div>
