@@ -6,7 +6,7 @@ function Footer(){
                 <h4>Tel: 818-234-2124</h4>
                 <h4>Email: jbl@const.com</h4>
             </div>
-            <div className="d-flex flex-grow-1">df</div>
+            <div className="d-flex flex-grow-1"></div>
       </footer>
     )
 }
