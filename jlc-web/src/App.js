@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-import img from './imgs/house1.jpg'
 import './App.css';
 import Footer from './components/Footer';
 import Main from './components/Main'
