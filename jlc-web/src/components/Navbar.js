@@ -10,7 +10,7 @@ return(
       <div className='d-flex justify-content-end flex-grow-1 gap-3'>
         <Button label="Home"/>
         <Button label="About"/>
-        <Button label="Contact"/>
+        <Button label="Contact" onClick={() => window.scrollTo({top:500, behavior:'smooth'})}/>
       </div>
     </nav>
 );
