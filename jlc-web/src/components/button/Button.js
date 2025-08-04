@@ -4,7 +4,7 @@ function Button({ label, onClick }) {
       className="btn btn-primary btn-sm text-uppercase"
       style={{
         backgroundColor: "#40509d",
-        fontFamily: "Helvetica",
+        fontFamily: "Michroma",
         color: "#F5F5F5",
         fontSize: "16px",
         border: "none",
