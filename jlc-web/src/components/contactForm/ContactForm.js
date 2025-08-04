@@ -15,7 +15,10 @@ function ContactForm() {
     setFormData({ name: "", email: "" });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      className="d-flex flex-column justify-content-center"
+      onSubmit={handleSubmit}
+    >
       <div>
         <label>Name:</label>
         <br />

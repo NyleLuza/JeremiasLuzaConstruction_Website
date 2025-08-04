@@ -1,12 +1,16 @@
 import ContactForm from "./contactForm/ContactForm";
+import logo from "./logos/logo3rev.png";
 function Footer() {
   return (
     <footer
       className="d-flex flex-grow-1"
       style={{ minHeight: "350px", backgroundColor: "#40509d" }}
     >
+      <div style={{ marginTop: "105px", paddingLeft: "120px" }}>
+        <img src={logo} />
+      </div>
       <div
-        className="d-flex flex-column justify-content-center flex-grow-1"
+        className="d-flex flex-column justify-content-center"
         style={{
           paddingLeft: "120px",
           paddingRight: "80px",
