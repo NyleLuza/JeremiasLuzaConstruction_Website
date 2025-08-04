@@ -15,7 +15,10 @@ function Footer() {
         <div style={{ marginTop: "105px" }}>
           <img src={logo} />
         </div>
-        <div className="d-flex justify-content-between">
+        <div
+          className="d-flex justify-content-between"
+          style={{ paddingTop: "10px" }}
+        >
           <SocialIcon link="https://www.instagram.com" icon={instaLogo} />
           <SocialIcon link="https://www.tiktok.com" icon={tiktokLogo} />
           <SocialIcon link="https://www.linkedin.com" icon={linkedinLogo} />
@@ -31,7 +34,7 @@ function Footer() {
         }}
       >
         <h2 className="d-flex" style={{ paddingBottom: "20px" }}>
-          Contact Us
+          Contact Us:
         </h2>
         <h4>Tel: 818-234-2124</h4>
         <h4>Email: jbl@const.com</h4>
