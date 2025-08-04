@@ -20,7 +20,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
     >
       <div>
-        <label>Name:</label>
+        <label style={{ color: "#F5F5F5" }}>Name:</label>
         <br />
         <input
           type="text"
@@ -30,7 +30,7 @@ function ContactForm() {
         />
       </div>
       <div>
-        <label>Email:</label>
+        <label style={{ color: "#F5F5F5" }}>Email:</label>
         <br />
         <input
           type="email"
