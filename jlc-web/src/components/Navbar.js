@@ -13,6 +13,7 @@ function Navbar() {
       <div className="d-flex justify-content-end flex-grow-1 gap-3">
         <Button label="Home" />
         <Button label="About" />
+        <Button label="Projects" />
         <Button
           label="Contact"
           onClick={() =>
