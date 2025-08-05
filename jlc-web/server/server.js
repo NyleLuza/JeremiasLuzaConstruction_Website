@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -5,8 +6,7 @@ const User = require("./models/User");
 const app = express();
 
 const PORT = 5000;
-const database_uri =
-  "mongodb+srv://nyleluza:%23BickBheese21@jlcweb-dev-cluster.ypapion.mongodb.net/?retryWrites=true&w=majority&appName=jlcweb-dev-cluster";
+const database_uri = process.env.My_DATABASE_URL;
 
 app.use(cors()); // allows frontend to access backend
 app.use(express.json()); // allows backend to read json bodies
