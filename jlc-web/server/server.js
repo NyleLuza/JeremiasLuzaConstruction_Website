@@ -14,6 +14,10 @@ app.use(express.json()); // allows backend to read json bodies
 // routes
 app.post("/api/users", async (req, res) => {
   try {
+    const existing = await User.findOne({ email: req.body.email });
+    if (existing) {
+      return res.status(400).json({ error: "Email Already Exists" });
+    }
     const { name, email, phone, location } = req.body;
     const newUser = new User({ name, email, phone, location });
     await newUser.save();

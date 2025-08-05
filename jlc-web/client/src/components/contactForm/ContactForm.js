@@ -16,14 +16,14 @@ function ContactForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
     try {
       await axios.post("http://localhost:5000/api/users", formData);
-      console.log(formData.name, "Posed");
     } catch (error) {
-      alert("Error creating user");
+      const errorMessage = error.response?.data?.error || "Error creating user";
+      console.error("Submission error:", error.response?.data);
+      alert(errorMessage);
     }
-    //setFormData({ name: "", email: "", phone: "", location: "" });
+    setFormData({ name: "", email: "", phone: "", location: "" });
   };
   return (
     <form
