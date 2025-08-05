@@ -1,23 +1,29 @@
 import { useState } from "react";
 import Button from "../button/Button";
-
+import axios from "axios"; // js library that allows to make http request
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    Location: "",
+    location: "",
   });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormData([(prev) => ({ ...prev, [name]: value })]);
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("form submitted", formData);
-    setFormData({ name: "", email: "" });
+    console.log(formData);
+    try {
+      await axios.post("http://localhost:5000/api/users", formData);
+      console.log(formData.name, "Posed");
+    } catch (error) {
+      alert("Error creating user");
+    }
+    //setFormData({ name: "", email: "", phone: "", location: "" });
   };
   return (
     <form
@@ -61,7 +67,7 @@ function ContactForm() {
         <input
           type="text"
           name="location"
-          value={formData.Location}
+          value={formData.location}
           onChange={handleChange}
         />
       </div>
