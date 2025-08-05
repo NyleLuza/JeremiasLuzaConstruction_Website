@@ -24,3 +24,7 @@ React Notes:
 
 - What is the e in the arrow function?
 	- It represents the DOM (Document Object Model) Event. These are events triggerd by user interactions 
+
+- What is process.env?
+	- It is an object that stores all environment variables for the current process
+	- The env in this case is the link to the database
