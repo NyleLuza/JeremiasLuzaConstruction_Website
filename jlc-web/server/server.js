@@ -5,7 +5,7 @@ const cors = require("cors");
 const User = require("./models/User");
 const app = express();
 
-const PORT = 5000;
+const PORT = process.env.PORT;
 const database_uri = process.env.My_DATABASE_URL;
 
 app.use(cors()); // allows frontend to access backend
