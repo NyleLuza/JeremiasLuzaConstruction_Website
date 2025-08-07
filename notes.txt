@@ -28,3 +28,10 @@ React Notes:
 - What is process.env?
 	- It is an object that stores all environment variables for the current process
 	- The env in this case is the link to the database
+
+- vh is the full viewport height. So when you set height to 100vh it provides the full viewport height of whatever screen you are on.
+  making it dynamic. Since my viewport height included the navbar, i had to use a calc function to subtract the 60px from the navbar to 
+  the 100vh
+
+- when overlapping text onto an image, the best approach is to use the background image css property because it allows the image to be more
+  responsive in comparison to having an image and a div with text that is absolute because it will scale better on any platform.
