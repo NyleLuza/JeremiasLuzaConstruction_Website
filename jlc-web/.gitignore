@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-.cache/
+.cache/ 
 .env
 /.pnp
 .pnp.js
