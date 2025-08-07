@@ -4,6 +4,8 @@ import simo_rear2 from "./imgs/simo/simo_rear2.jpg";
 import simo_rear3 from "./imgs/simo/simo_rear3.jpg";
 import simo_masterbath1 from "./imgs/simo/simo_masterbath1.jpg";
 import BodyButton from "./bodyButton/BodyButton";
+import { useNavigate } from "react-router-dom";
+import Projects from "../pages/projects/Projects";
 
 function Main() {
   return (

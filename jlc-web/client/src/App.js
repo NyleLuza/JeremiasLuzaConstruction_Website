@@ -1,14 +1,9 @@
-import Navbar from "./components/Navbar";
-import "./App.css";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <div className="d-flex flex-grow-1 flex-column h-100">
-      <Navbar />
-      <Main />
-      <Footer />
+      <Home />
     </div>
   );
 }
