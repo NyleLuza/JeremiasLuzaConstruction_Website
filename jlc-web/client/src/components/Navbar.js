@@ -1,5 +1,6 @@
 import logo from "./logos/logo3rev.png";
 import Button from "./button/Button";
+import BodyButton from "./bodyButton/BodyButton";
 
 function Navbar() {
   return (
