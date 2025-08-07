@@ -4,10 +4,10 @@ import simo_rear2 from "./imgs/simo/simo_rear2.jpg";
 import simo_rear3 from "./imgs/simo/simo_rear3.jpg";
 import simo_masterbath1 from "./imgs/simo/simo_masterbath1.jpg";
 import BodyButton from "./bodyButton/BodyButton";
-import { useNavigate } from "react-router-dom";
-import Projects from "../pages/projects/Projects";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Main() {
+  const nav = useNavigate();
   return (
     <div
       className="d-flex flex-column flex-grow-1"
@@ -47,7 +47,12 @@ function Main() {
               className="d-flex justify-content-center"
               style={{ paddingTop: "20px" }}
             >
-              <BodyButton label="See Our Projects" />
+              <BodyButton
+                label="See Our Projects"
+                onClick={() => {
+                  nav("/Projects");
+                }}
+              />
             </div>
           </div>
         </div>

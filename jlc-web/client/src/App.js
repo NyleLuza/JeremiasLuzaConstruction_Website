@@ -1,10 +1,15 @@
 import Home from "./pages/Home/Home";
+import Projects from "./pages/projects/Projects";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="d-flex flex-grow-1 flex-column h-100">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
