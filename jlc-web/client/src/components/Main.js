@@ -26,8 +26,9 @@ function Main() {
         <div
           className="d-flex justify-content-center align-items-center flex-grow-1"
           style={{
-            backgroundImage: `URL(${simo_masterbath1})`,
+            backgroundImage: `URL(${simo_rear2})`,
             backgroundSize: "cover",
+            backgroundPosition: "center center",
             color: "black",
           }}
         >
