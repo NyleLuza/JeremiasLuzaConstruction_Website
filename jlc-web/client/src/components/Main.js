@@ -6,13 +6,13 @@ function Main() {
       className="d-flex flex-column flex-grow-1"
       style={{ minheight: "100vh", paddingTop: "60px" }}
     >
-      {/*<img
+      <img
         src={img}
         alt="Example"
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />*/}
-
-      {/* first section of the body */}
+      />
+      {/*
+      {/* first section of the body
       <div
         className="d-flex flex-grow-1"
         style={{ height: "500px", color: "black" }}
@@ -32,6 +32,7 @@ function Main() {
       >
         heasdfasfdad
       </div>
+      */}
     </div>
   );
 }
