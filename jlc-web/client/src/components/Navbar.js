@@ -1,7 +1,7 @@
 import logo from "./logos/logo3rev.png";
 import Button from "./button/Button";
-import BodyButton from "./bodyButton/BodyButton";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
   let nav = useNavigate();
@@ -18,7 +18,10 @@ function Navbar() {
       </div>
       <div className="d-flex justify-content-end flex-grow-1 gap-3">
         <Button label="Home" />
-        <Button label="About" />
+        <HashLink smooth to="#about">
+          <Button label="About" />
+        </HashLink>
+
         <Button
           label="Projects"
           onClick={() => {
