@@ -3,7 +3,7 @@ import simo_rear1 from "./imgs/simo/simo_rear1.jpg";
 import simo_rear2 from "./imgs/simo/simo_rear2.jpg";
 import simo_rear3 from "./imgs/simo/simo_rear3.jpg";
 import simo_masterbath1 from "./imgs/simo/simo_masterbath1.jpg";
-import pops from "./imgs/Jerry_Luza.jpg";
+import pops from "./imgs/jerryluza.jpeg";
 import BodyButton from "./bodyButton/BodyButton";
 import { Navigate, useNavigate } from "react-router-dom";
 
@@ -11,6 +11,7 @@ function Main() {
   const nav = useNavigate();
   return (
     <div
+      id="home"
       className="d-flex flex-column flex-grow-1"
       style={{ minheight: "100vh", paddingTop: "60px" }}
     >

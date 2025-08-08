@@ -13,11 +13,17 @@ function Navbar() {
         backgroundColor: "#40509d",
       }}
     >
-      <div className="d-flex">
-        <img src={logo} />
-      </div>
+      <HashLink smooth to="#home">
+        <div className="d-flex">
+          <img src={logo} />
+        </div>
+      </HashLink>
+
       <div className="d-flex justify-content-end flex-grow-1 gap-3">
-        <Button label="Home" />
+        <HashLink smooth to="#home">
+          <Button label="Home" />
+        </HashLink>
+
         <HashLink smooth to="#about">
           <Button label="About" />
         </HashLink>
