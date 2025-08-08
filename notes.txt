@@ -42,3 +42,6 @@ React Notes:
 - Problem: Text was not looking proper on the iamge because of the lighting.
 	- Solution: Add a shadow to the text using the textShadow CSS property.
 		- The first 3 attributes control the strength (3rd) and direction (1st and 2nd) of the shadow and the 4th controls the color of the shadow
+
+- When wanting to scroll to specific part of the page, you need to give the section an id and then you need to wrap the button in a hashlink and you Pass
+  in the id into the "smooth to" parameter
