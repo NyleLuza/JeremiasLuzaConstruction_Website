@@ -9,21 +9,15 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 function Main() {
   const nav = useNavigate();
+
   return (
     <div
       id="home"
       className="d-flex flex-column flex-grow-1"
       style={{ minheight: "100vh", paddingTop: "60px" }}
     >
-      {/*
-      <img
-        src={img}
-        alt="Example"
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />
-      */}
       {/* first section of the body*/}
-      <div
+      <section
         className="d-flex flex-grow-1"
         style={{ height: "calc(100vh - 60px)", color: "black" }}
       >
@@ -58,7 +52,8 @@ function Main() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      {/* End of First section of the body*/}
 
       {/* Second section of the body*/}
       <section
@@ -76,6 +71,7 @@ function Main() {
               backgroundSize: "cover",
               backgroundPosition: "50% 10%",
               border: "2px solid grey",
+              boxShadow: "1px 4px 4px rgba(0,0,0,0.8)",
             }}
           ></div>
         </div>
@@ -107,6 +103,7 @@ function Main() {
           </p>
         </div>
       </section>
+      {/*End of Second section of the body*/}
     </div>
   );
 }
