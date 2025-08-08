@@ -75,6 +75,7 @@ function Main() {
               backgroundImage: `URL(${pops})`,
               backgroundSize: "cover",
               backgroundPosition: "50% 10%",
+              border: "2px solid grey",
             }}
           ></div>
         </div>
