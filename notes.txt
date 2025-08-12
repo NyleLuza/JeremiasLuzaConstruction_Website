@@ -1,0 +1,47 @@
+React Notes:
+- Image was affecting the size of the nav and footer bar.
+	- Solution: adjust the body container to 100% width and height and set object-fit to cover.
+		- Object fit ensures that the container is filled and crops when needed. Basically just scales the image to the size of the 	container
+		- Applying 100% to width and Height makes the image fit to the size of its parent container
+
+* Min-height allows for the lowest height the container could be. Reason: when i used regular height, the navbar was shrinking in height when the size viewing perspective changed
+
+- Did not know how to have a button scroll to the contact form at the bottom of the page,
+	- utilizing the onclick function allows for us to scroll to the bottom from a click
+		- Uses two parameters top which determines how far from the top you want to go down
+		- behavior, the type of animation you want after initiating the click
+
+- What is useState({...})?
+	- useState returns us an array with two elements of states
+		- One element is for the current value of the state
+		- Other element gives us the updated value of the state
+		- Pass in an initial state into the function. In our case
+		  the state are 3 different values set to null which are name, email
+	- when we initialize a use state we need to destructure the return by setting the variable to array of size 2
+
+- Why do we need ...prev in the arrow function?
+	- We need the ... because it allows us to preserve the past information. It takes the prev state and copies it to ...prev
+
+- What is the e in the arrow function?
+	- It represents the DOM (Document Object Model) Event. These are events triggerd by user interactions 
+
+- What is process.env?
+	- It is an object that stores all environment variables for the current process
+	- The env in this case is the link to the database
+
+- vh is the full viewport height. So when you set height to 100vh it provides the full viewport height of whatever screen you are on.
+  making it dynamic. Since my viewport height included the navbar, i had to use a calc function to subtract the 60px from the navbar to 
+  the 100vh
+
+- when overlapping text onto an image, the best approach is to use the background image css property because it allows the image to be more
+  responsive in comparison to having an image and a div with text that is absolute because it will scale better on any platform.
+
+- Wasn't sure if using flex box just for a button was necessary, but it is necessary when you need it for positioning. And in this case i 
+  need it to be centered
+
+- Problem: Text was not looking proper on the iamge because of the lighting.
+	- Solution: Add a shadow to the text using the textShadow CSS property.
+		- The first 3 attributes control the strength (3rd) and direction (1st and 2nd) of the shadow and the 4th controls the color of the shadow
+
+- When wanting to scroll to specific part of the page, you need to give the section an id and then you need to wrap the button in a hashlink and you Pass
+  in the id into the "smooth to" parameter
