@@ -1,4 +1,4 @@
-import logo from "./logos/logo3rev.png";
+import logo from "./logos/logo3rev10.png";
 import Button from "./button/Button";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";

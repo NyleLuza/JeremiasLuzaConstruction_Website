@@ -19,7 +19,11 @@ function Main() {
       {/* first section of the body*/}
       <section
         className="d-flex flex-grow-1"
-        style={{ height: "calc(100vh - 60px)", color: "black" }}
+        style={{
+          height: "calc(100vh - 60px)",
+          color: "black",
+          boxShadow: "1px 4px 4px rgba(0,0,0,0.8)",
+        }}
       >
         <div
           className="d-flex justify-content-center align-items-center flex-grow-1"
@@ -59,7 +63,11 @@ function Main() {
       <section
         id="about"
         className="d-flex flex-grow-1"
-        style={{ height: "100vh", color: "black" }}
+        style={{
+          height: "100vh",
+          color: "black",
+          boxShadow: "1px 4px 4px rgba(0,0,0,0.8)",
+        }}
       >
         <div className="d-flex flex-grow-1 align-items-center justify-content-center">
           <div
@@ -71,7 +79,7 @@ function Main() {
               backgroundSize: "cover",
               backgroundPosition: "50% 10%",
               border: "2px solid grey",
-              boxShadow: "1px 4px 4px rgba(0,0,0,0.8)",
+              boxShadow: "1px 1px 4px rgba(0,0,0,0.8)",
             }}
           ></div>
         </div>
@@ -104,6 +112,14 @@ function Main() {
         </div>
       </section>
       {/*End of Second section of the body*/}
+
+      {/*Start of Third section of the body*/}
+      <section className="d-flex" style={{ minHeight: "100vh" }}>
+        {/*left hand side for pictures*/}
+        <div></div>
+        {/*right hand side for text and description*/}
+        <div></div>
+      </section>
     </div>
   );
 }
