@@ -114,11 +114,17 @@ function Main() {
       {/*End of Second section of the body*/}
 
       {/*Start of Third section of the body*/}
-      <section className="d-flex" style={{ minHeight: "100vh" }}>
-        {/*left hand side for pictures*/}
-        <div></div>
-        {/*right hand side for text and description*/}
-        <div></div>
+      <section className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+        {/* Title */}
+        <div>
+          <h1>Featured Projects</h1>
+        </div>
+        <main>
+          {/*left hand side for pictures*/}
+          <div>sdfsf</div>
+          {/*right hand side for text and description*/}
+          <div>sdsfs</div>
+        </main>
       </section>
     </div>
   );
