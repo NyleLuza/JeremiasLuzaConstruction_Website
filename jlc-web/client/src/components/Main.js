@@ -22,7 +22,7 @@ function Main() {
         style={{
           height: "calc(100vh - 60px)",
           color: "black",
-          boxShadow: "1px 4px 4px rgba(0,0,0,0.8)",
+          boxShadow: "1px 4px 4px rgba(0,0,0,0.2)",
         }}
       >
         <div
@@ -66,7 +66,7 @@ function Main() {
         style={{
           height: "100vh",
           color: "black",
-          boxShadow: "1px 4px 4px rgba(0,0,0,0.8)",
+          boxShadow: "1px 4px 4px rgba(0,0,0,0.2)",
         }}
       >
         <div className="d-flex flex-grow-1 align-items-center justify-content-center">
@@ -119,11 +119,13 @@ function Main() {
         <div>
           <h1>Featured Projects</h1>
         </div>
-        <main>
+        <main className="d-flex flex-grow-1 justify-content-center align-items-center">
           {/*left hand side for pictures*/}
-          <div>sdfsf</div>
+          <div className="d-flex flex-grow-1">sdfsf</div>
           {/*right hand side for text and description*/}
-          <div>sdsfs</div>
+          <div className="d-flex flex-grow-1 justify-content-center">
+            <h1>Center</h1>
+          </div>
         </main>
       </section>
     </div>
