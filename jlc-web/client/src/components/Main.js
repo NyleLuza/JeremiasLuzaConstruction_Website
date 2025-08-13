@@ -6,6 +6,7 @@ import simo_masterbath1 from "./imgs/simo/simo_masterbath1.jpg";
 import pops from "./imgs/jerryluza.jpeg";
 import BodyButton from "./bodyButton/BodyButton";
 import { Navigate, useNavigate } from "react-router-dom";
+import NextPrevButton from "./nextprevButton/NextPrevButton";
 
 function Main() {
   const nav = useNavigate();
@@ -121,7 +122,19 @@ function Main() {
         </div>
         <main className="d-flex flex-grow-1 justify-content-center align-items-center">
           {/*left hand side for pictures*/}
-          <div className="d-flex flex-grow-1">sdfsf</div>
+          <div
+            className="d-flex flex-grow-1 flex-column"
+            style={{ height: "100vh" }}
+          >
+            <div className="d-flex flex-grow-1 justify-content-center align-items-center">
+              je
+            </div>
+            <div className="d-flex justify-content-center">
+              <NextPrevButton />
+              <NextPrevButton />
+            </div>
+          </div>
+
           {/*right hand side for text and description*/}
           <div className="d-flex flex-grow-1 justify-content-center">
             <h1>Center</h1>
