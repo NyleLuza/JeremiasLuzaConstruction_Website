@@ -120,26 +120,7 @@ function Main() {
         <div>
           <h1>Featured Projects</h1>
         </div>
-        <main className="d-flex flex-grow-1 justify-content-center align-items-center">
-          {/*left hand side for pictures*/}
-          <div
-            className="d-flex flex-grow-1 flex-column"
-            style={{ height: "100vh" }}
-          >
-            <div className="d-flex flex-grow-1 justify-content-center align-items-center">
-              je
-            </div>
-            <div className="d-flex justify-content-center">
-              <NextPrevButton />
-              <NextPrevButton />
-            </div>
-          </div>
-
-          {/*right hand side for text and description*/}
-          <div className="d-flex flex-grow-1 justify-content-center">
-            <h1>Center</h1>
-          </div>
-        </main>
+        <NextPrevButton />
       </section>
     </div>
   );
