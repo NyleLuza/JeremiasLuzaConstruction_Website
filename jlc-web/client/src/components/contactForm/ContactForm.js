@@ -19,8 +19,17 @@ function ContactForm() {
     try {
       await axios.post("http://localhost:5000/api/users", formData);
     } catch (error) {
+      {
+        /* '?' allows for chaining errors, while the or operator allows for a fallback response if chained message is null */
+      }
       const errorMessage = error.response?.data?.error || "Error creating user";
+      {
+        /* logs the error to the browser console */
+      }
       console.error("Submission error:", error.response?.data);
+      {
+        /* creates a pop up message for the user to see */
+      }
       alert(errorMessage);
     }
     setFormData({ name: "", email: "", phone: "", location: "" });
