@@ -1,3 +1,7 @@
+//TODO: - Set up Cloudflare
+//      - Create route to pull images from cloudflare
+//      - Synchronize images and house descriptions
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 function NextPrevButton() {
