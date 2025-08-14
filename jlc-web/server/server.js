@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const User = require("./models/User");
+const User = require("./models/House");
 const app = express();
 
 const PORT = process.env.PORT;
@@ -25,6 +26,11 @@ app.post("/api/users", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Failed to create user" });
   }
+});
+
+app.get("/api/houses", async (req, res) => {
+  const houses = await House.find();
+  res.json(houses);
 });
 
 async function connect() {
