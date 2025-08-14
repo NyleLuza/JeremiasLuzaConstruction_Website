@@ -28,6 +28,7 @@ app.post("/api/users", async (req, res) => {
   }
 });
 
+
 app.get("/api/houses", async (req, res) => {
   const [houses] = await House.aggregate([{ $sample: { size: 1 } }]);
   res.json(houses);

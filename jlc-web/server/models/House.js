@@ -4,7 +4,7 @@ const houseSchema = new mongoose.Schema({
   remodelType: String,
   address: String,
   description: String,
-  image: Buffer,
+  image: String,
 });
 
 module.exports = mongoose.model("House", houseSchema);
