@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const User = require("./models/User");
-const User = require("./models/House");
+const House = require("./models/House");
 const app = express();
 
 const PORT = process.env.PORT;

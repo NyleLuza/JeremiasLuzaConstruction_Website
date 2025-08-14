@@ -17,6 +17,7 @@ function NextPrevButton() {
     } catch (error) {
       const errorMessage =
         error.response?.data?.error || "Error obtaining picture";
+      console.error(errorMessage);
       alert(errorMessage);
     }
     setButtonState({
