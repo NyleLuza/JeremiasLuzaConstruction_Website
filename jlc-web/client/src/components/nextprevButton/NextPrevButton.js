@@ -19,7 +19,7 @@ function NextPrevButton() {
       const response = await axios.get("http://localhost:5000/api/houses");
       houses = response.data;
 
-      console.error("key pressed", houses);
+      console.error("key pressed", houses._id);
     } catch (error) {
       const errorMessage =
         error.response?.data?.error || "Error obtaining picture";
@@ -56,10 +56,6 @@ function NextPrevButton() {
             style={{ width: "100%", height: "100%" }}
           />
         </div>
-        <div className="d-flex justify-content-end">
-          <button onClick={handleNextClick}>Prev</button>
-          <button onClick={handleNextClick}>Next</button>
-        </div>
       </div>
 
       {/*right hand side for text and description*/}
@@ -80,6 +76,10 @@ function NextPrevButton() {
           <h2>{buttonState.prevRemodelType}</h2>
           <div>{buttonState.prevAddress}</div>
           <div>{buttonState.prevDescription}</div>
+        </div>
+        <div className="d-flex justify-content-end">
+          <button onClick={handleNextClick}>Prev</button>
+          <button onClick={handleNextClick}>Next</button>
         </div>
       </div>
     </main>
