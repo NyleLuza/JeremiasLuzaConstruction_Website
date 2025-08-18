@@ -116,10 +116,6 @@ function Main() {
 
       {/*Start of Third section of the body*/}
       <section className="d-flex flex-column" style={{ minHeight: "100vh" }}>
-        {/* Title */}
-        <div>
-          <h1>Featured Projects</h1>
-        </div>
         <NextPrevButton />
       </section>
     </div>
