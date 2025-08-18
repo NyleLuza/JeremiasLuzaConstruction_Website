@@ -1,5 +1,5 @@
 //TODO: - Set up Cloudflare
-//      - Create route to pull images from cloudflare
+//      - Create route to pull images from aws s3
 //      - Synchronize images and house descriptions
 
 import { useState, useEffect } from "react";
@@ -39,7 +39,7 @@ function NextPrevButton() {
         style={{ height: "100vh" }}
       >
         <div className="d-flex flex-grow-1 justify-content-center align-items-center">
-          {buttonState.prevImage}
+          <img src={buttonState.prevImage} />
         </div>
         <div className="d-flex justify-content-end">
           <button onClick={handleNextClick}>Prev</button>
