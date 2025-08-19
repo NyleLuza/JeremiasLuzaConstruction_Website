@@ -65,7 +65,8 @@ function Main() {
         id="about"
         className="d-flex flex-grow-1"
         style={{
-          height: "100vh",
+          scrollMarginTop: "60px",
+          height: "calc(100vh - 60px)",
           color: "black",
           boxShadow: "1px 4px 4px rgba(0,0,0,0.2)",
         }}
@@ -118,7 +119,7 @@ function Main() {
       <section
         id="projects"
         className="d-flex flex-column"
-        style={{ paddingTop: "60px" }}
+        style={{ minHeight: "calc(100vh - 60px)", scrollMarginTop: "60px" }}
       >
         <NextPrevButton />
       </section>

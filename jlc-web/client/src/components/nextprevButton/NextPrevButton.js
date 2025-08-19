@@ -42,10 +42,7 @@ function NextPrevButton() {
     });
   };
   return (
-    <main
-      className="d-flex flex-grow-1 justify-content-center align-items-center"
-      style={{ height: "calc(100vh - 60px)" }}
-    >
+    <main className="d-flex flex-grow-1 justify-content-center align-items-center">
       {/*left hand side for text and description*/}
       <div
         className="d-flex flex-grow-1 flex-column justify-content-center"
