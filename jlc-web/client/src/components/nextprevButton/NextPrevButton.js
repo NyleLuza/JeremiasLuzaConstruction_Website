@@ -46,23 +46,7 @@ function NextPrevButton() {
       className="d-flex flex-grow-1 justify-content-center align-items-center"
       style={{ height: "calc(100vh - 60px)" }}
     >
-      {/*left hand side for pictures*/}
-      <div
-        className="d-flex flex-grow-1 flex-column"
-        style={{ height: "100%", width: "100%" }}
-      >
-        <div
-          className="d-flex flex-grow-1 justify-content-center align-items-center"
-          style={{
-            backgroundImage: `URL(${buttonState.prevImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-            transition: "0.8s",
-          }}
-        ></div>
-      </div>
-
-      {/*right hand side for text and description*/}
+      {/*left hand side for text and description*/}
       <div
         className="d-flex flex-grow-1 flex-column justify-content-center"
         style={{ height: "100%", width: "100%" }}
@@ -94,6 +78,21 @@ function NextPrevButton() {
           <button onClick={handleNextClick}>Prev</button>
           <button onClick={handleNextClick}>Next</button>
         </div>
+      </div>
+      {/*right hand side for pictures*/}
+      <div
+        className="d-flex flex-grow-1 flex-column"
+        style={{ height: "100%", width: "100%" }}
+      >
+        <div
+          className="d-flex flex-grow-1 justify-content-center align-items-center"
+          style={{
+            backgroundImage: `URL(${buttonState.prevImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            transition: "0.8s",
+          }}
+        ></div>
       </div>
     </main>
   );
