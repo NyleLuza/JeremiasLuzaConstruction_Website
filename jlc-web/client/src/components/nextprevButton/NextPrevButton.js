@@ -1,14 +1,18 @@
 //TODO: - Set up Cloudflare
 //    X  - Create route to pull images from aws s3
 //    X  - Synchronize images and house descriptions
+//       - Pictures need to come in ordered
 //       - Fix sizing of section
 //       - Align text of description
 //       - Clean up text and frame images
-
+//opacity: isActive ? 1 : 0,
+//      transform: isActive ? "translateX(0)" : "translateX(-30px)",
+//    transition: "all 0.5s ease",
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { motion } from "motion/react";
 function NextPrevButton() {
-  const [isActive, setIsActive] = useState(true);
+  const [slide, setSlide] = useState(0);
   const [buttonState, setButtonState] = useState({
     prevRemodelType: "remodel",
     prevAddress: "address",
@@ -30,10 +34,7 @@ function NextPrevButton() {
       console.error(errorMessage);
       alert(errorMessage);
     }
-    setIsActive(false);
-    setTimeout(() => {
-      setIsActive(true); // fade back in
-    }, 300); // matches CSS duration
+    setSlide((prev) => prev + 360);
     setButtonState({
       prevRemodelType: houses.remodelType,
       prevAddress: houses.address,
@@ -42,9 +43,12 @@ function NextPrevButton() {
     });
   };
   return (
-    <main
+    <motion.main
       className="d-flex flex-grow-1 justify-content-center align-items-center"
-      style={{ height: "calc(100vh - 60px)" }}
+      animate={{ rotate: slide }}
+      style={{
+        height: "calc(100vh - 60px)",
+      }}
     >
       {/*left hand side for text and description*/}
       <div
@@ -61,18 +65,11 @@ function NextPrevButton() {
           className="d-flex align-items-center flex-column"
           style={{
             height: "100%",
-            opacity: isActive ? 1 : 0,
-            transform: isActive ? "translateX(0)" : "translateX(-30px)",
-            transition: "all 0.5s ease",
           }}
         >
           <h2>{buttonState.prevRemodelType}</h2>
-          <div style={{ transition: "#000000 0.3s ease-in-out" }}>
-            {buttonState.prevAddress}
-          </div>
-          <div style={{ transition: "#000000 4s ease-in-out" }}>
-            {buttonState.prevDescription}
-          </div>
+          <div>{buttonState.prevAddress}</div>
+          <div>{buttonState.prevDescription}</div>
         </div>
         <div className="d-flex justify-content-end">
           <button onClick={handleNextClick}>Prev</button>
@@ -90,11 +87,10 @@ function NextPrevButton() {
             backgroundImage: `URL(${buttonState.prevImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center center",
-            transition: "0.8s",
           }}
         ></div>
       </div>
-    </main>
+    </motion.main>
   );
 }
 export default NextPrevButton;
