@@ -115,7 +115,11 @@ function Main() {
       {/*End of Second section of the body*/}
 
       {/*Start of Third section of the body*/}
-      <section className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+      <section
+        id="projects"
+        className="d-flex flex-column"
+        style={{ paddingTop: "60px" }}
+      >
         <NextPrevButton />
       </section>
     </div>

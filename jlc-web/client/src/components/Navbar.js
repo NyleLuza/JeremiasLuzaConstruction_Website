@@ -27,7 +27,9 @@ function Navbar() {
         <HashLink smooth to="#about">
           <Button label="About" />
         </HashLink>
-
+        <HashLink smooth to="#projects">
+          <Button label="Feat Projects" />
+        </HashLink>
         <Button
           label="Projects"
           onClick={() => {

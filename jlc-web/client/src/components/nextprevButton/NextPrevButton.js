@@ -1,6 +1,9 @@
 //TODO: - Set up Cloudflare
-//      - Create route to pull images from aws s3
-//      - Synchronize images and house descriptions
+//    X  - Create route to pull images from aws s3
+//    X  - Synchronize images and house descriptions
+//       - Fix sizing of section
+//       - Align text of description
+//       - Clean up text and frame images
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -41,7 +44,7 @@ function NextPrevButton() {
   return (
     <main
       className="d-flex flex-grow-1 justify-content-center align-items-center"
-      style={{ height: "90vh" }}
+      style={{ height: "calc(100vh - 60px)" }}
     >
       {/*left hand side for pictures*/}
       <div
