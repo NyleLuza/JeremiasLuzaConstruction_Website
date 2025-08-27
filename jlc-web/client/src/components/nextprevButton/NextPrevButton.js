@@ -1,9 +1,7 @@
 //TODO: - Set up Cloudflare
-//    X  - Create route to pull images from aws s3
-//    X  - Synchronize images and house descriptions
-//       - Fix sizing of section
-//       - Align text of description
-//       - Clean up text and frame images
+//       - resize images and upload to amazon s3
+//       - style prev and next buttons
+//       - clean up featured projects title
 
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
