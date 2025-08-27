@@ -63,12 +63,12 @@ function NextPrevButton() {
       >
         <div
           className="d-flex justify-content-center"
-          style={{ height: "100%" }}
+          style={{ paddingTop: "20px" }}
         >
-          <h1>Featured Projects</h1>
+          <h3>Remodels</h3>
         </div>
         <div
-          className="d-flex align-items-center flex-column"
+          className="d-flex align-items-left justify-content-center flex-column"
           style={{
             height: "100%",
             opacity: isActive ? 1 : 0,
@@ -76,15 +76,13 @@ function NextPrevButton() {
             transition: "all 0.5s ease",
             maxWidth: "500px",
             margin: "0 auto",
+            textIndent: "0",
           }}
         >
+          <div>{current.address}</div>
           <h2>{current.remodelType}</h2>
-          <div style={{ transition: "#000000 0.3s ease-in-out" }}>
-            {current.address}
-          </div>
-          <div style={{ transition: "#000000 4s ease-in-out" }}>
-            {current.description}
-          </div>
+
+          <div>{current.description}</div>
         </div>
         <div className="d-flex justify-content-end">
           <button onClick={prev}>Prev</button>
