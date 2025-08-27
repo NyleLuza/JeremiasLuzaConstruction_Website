@@ -5,41 +5,54 @@
 //       - Align text of description
 //       - Clean up text and frame images
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 function NextPrevButton() {
+  const [houses, setHouses] = useState([]);
   const [isActive, setIsActive] = useState(true);
-  const [buttonState, setButtonState] = useState({
-    prevRemodelType: "remodel",
-    prevAddress: "address",
-    prevDescription: "desc",
-    prevImage: "image",
-  });
-  const handleNextClick = async (event) => {
-    event.preventDefault();
+  const [i, setI] = useState(0);
+  const current = houses[i] || {
+    remodelType: "remodel",
+    address: "address",
+    description: "desc",
+    image: "image",
+  };
 
-    let houses;
-    try {
-      const response = await axios.get("http://localhost:5000/api/houses");
-      houses = response.data;
+  useEffect(() => {
+    const ac = new AbortController();
+    (async () => {
+      try {
+        const { data } = await axios.get("http://localhost:5000/api/houses");
+        console.log(data);
+        setHouses(Array.isArray(data) ? data : []);
+        setI(0);
+      } catch (error) {
+        const errorMessage =
+          error.response?.data?.error || "Error obtaining picture";
+        console.error(errorMessage);
+        alert(errorMessage);
+      }
+    })();
+    return () => ac.abort();
+  }, []);
 
-      console.error("key pressed", houses._id);
-    } catch (error) {
-      const errorMessage =
-        error.response?.data?.error || "Error obtaining picture";
-      console.error(errorMessage);
-      alert(errorMessage);
-    }
+  const animate = () => {
     setIsActive(false);
     setTimeout(() => {
       setIsActive(true); // fade back in
-    }, 300); // matches CSS duration
-    setButtonState({
-      prevRemodelType: houses.remodelType,
-      prevAddress: houses.address,
-      prevDescription: houses.description,
-      prevImage: houses.image,
-    });
+    }, 300);
+  };
+  const next = (e) => {
+    e.preventDefault();
+    console.log(current);
+    animate();
+    setI((prev) => (prev + 1) % houses.length);
+  };
+
+  const prev = (e) => {
+    e.preventDefault();
+    animate();
+    setI((prev) => (prev - 1 + houses.length) % houses.length);
   };
   return (
     <main className="d-flex flex-grow-1 justify-content-center align-items-center">
@@ -61,19 +74,21 @@ function NextPrevButton() {
             opacity: isActive ? 1 : 0,
             transform: isActive ? "translateX(0)" : "translateX(-30px)",
             transition: "all 0.5s ease",
+            maxWidth: "500px",
+            margin: "0 auto",
           }}
         >
-          <h2>{buttonState.prevRemodelType}</h2>
+          <h2>{current.remodelType}</h2>
           <div style={{ transition: "#000000 0.3s ease-in-out" }}>
-            {buttonState.prevAddress}
+            {current.address}
           </div>
           <div style={{ transition: "#000000 4s ease-in-out" }}>
-            {buttonState.prevDescription}
+            {current.description}
           </div>
         </div>
         <div className="d-flex justify-content-end">
-          <button onClick={handleNextClick}>Prev</button>
-          <button onClick={handleNextClick}>Next</button>
+          <button onClick={prev}>Prev</button>
+          <button onClick={next}>Next</button>
         </div>
       </div>
       {/*right hand side for pictures*/}
@@ -84,7 +99,7 @@ function NextPrevButton() {
         <div
           className="d-flex flex-grow-1 justify-content-center align-items-center"
           style={{
-            backgroundImage: `URL(${buttonState.prevImage})`,
+            backgroundImage: `URL(${current.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center center",
             transition: "0.8s",

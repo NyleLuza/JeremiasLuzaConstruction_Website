@@ -31,13 +31,8 @@ app.post("/api/users", async (req, res) => {
 });
 
 app.get("/api/houses", async (req, res) => {
-  const [houses] = await House.aggregate([
-    // [houses] destructures the array
-    { $match: { _id: { $ne: lastId } } },
-    { $sample: { size: 1 } },
-  ]); // match excludes last entry used; ne = not equal
-  lastId = houses._id;
-  console.log("This is last Id: ", lastId);
+  const houses = await House.find();
+  console.log(houses);
   res.json(houses);
 });
 
