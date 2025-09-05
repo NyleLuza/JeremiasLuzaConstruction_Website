@@ -95,7 +95,7 @@ function Main() {
         </div>
         <div
           ref={about.ref}
-          className={`fade-in-element d-flex flex-grow-1 flex-column align-items-center justify-content-center ${
+          className={`fade-in-element-right d-flex flex-grow-1 flex-column align-items-center justify-content-center ${
             about.isVisible ? "animate" : ""
           }`}
         >
