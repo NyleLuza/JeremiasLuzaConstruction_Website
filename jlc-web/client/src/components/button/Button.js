@@ -3,9 +3,9 @@ function Button({ label, onClick }) {
     <button
       className="btn btn-primary btn-sm text-uppercase"
       style={{
-        backgroundColor: "#40509d",
+        backgroundColor: "#FFFFFF",
         fontFamily: "Michroma",
-        color: "#F5F5F5",
+        color: "#40509d",
         fontSize: "16px",
         border: "none",
       }}

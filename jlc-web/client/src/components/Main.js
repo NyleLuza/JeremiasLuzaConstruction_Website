@@ -7,10 +7,13 @@ import pops from "./imgs/jerryluza.jpeg";
 import BodyButton from "./bodyButton/BodyButton";
 import { Navigate, useNavigate } from "react-router-dom";
 import NextPrevButton from "./nextprevButton/NextPrevButton";
+import "./main.css";
+import useFadeInOnScroll from "./useFadeInOnScroll.js";
 
 function Main() {
   const nav = useNavigate();
-
+  const hero = useFadeInOnScroll();
+  const about = useFadeInOnScroll();
   return (
     <div
       id="home"
@@ -35,7 +38,12 @@ function Main() {
             color: "black",
           }}
         >
-          <div className="d-flex flex-column">
+          <div
+            ref={hero.ref}
+            className={`d-flex flex-column fade-in-element ${
+              hero.isVisible ? "animate" : ""
+            }`}
+          >
             <h1
               style={{
                 color: "white",
@@ -85,7 +93,12 @@ function Main() {
             }}
           ></div>
         </div>
-        <div className="d-flex flex-grow-1 flex-column align-items-center justify-content-center">
+        <div
+          ref={about.ref}
+          className={`fade-in-element d-flex flex-grow-1 flex-column align-items-center justify-content-center ${
+            about.isVisible ? "animate" : ""
+          }`}
+        >
           <h2>Jeremias Luza</h2>
           <div style={{ maxWidth: "550px", textAlign: "center" }}>
             Licensed contractor and civil engineer (in the Philippines)

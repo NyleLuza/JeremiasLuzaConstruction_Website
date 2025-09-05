@@ -1,4 +1,4 @@
-import logo from "./logos/logo3rev10.png";
+import logo from "./logos/logo1rev2rectangle60h.png";
 import Button from "./button/Button";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -10,7 +10,7 @@ function Navbar() {
       className="d-flex align-items-center justify-content-between px-5 navbar fixed-top "
       style={{
         minHeight: "60px",
-        backgroundColor: "#40509d",
+        backgroundColor: "#ffffff",
       }}
     >
       <HashLink smooth to="#home">
