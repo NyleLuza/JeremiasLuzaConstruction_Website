@@ -1,7 +1,7 @@
 // put this above your Main component or in a separate file
 import { useEffect, useRef, useState } from "react";
 
-export default function useFadeInOnScroll(threshold = 0.2, once = true) {
+export default function useFadeInOnScroll(threshold = 0.2, once = false) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 

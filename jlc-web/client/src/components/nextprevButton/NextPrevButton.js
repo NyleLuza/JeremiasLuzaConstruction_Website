@@ -5,7 +5,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import useFadeInOnScroll from "../useFadeInOnScroll.js";
+import "../main.css";
+
 function NextPrevButton() {
+  const desc = useFadeInOnScroll();
   const [houses, setHouses] = useState([]);
   const [isActive, setIsActive] = useState(true);
   const [i, setI] = useState(0);
@@ -62,11 +66,12 @@ function NextPrevButton() {
         <div
           className="d-flex justify-content-center"
           style={{ paddingTop: "20px" }}
-        >
-          <h3>Remodels</h3>
-        </div>
+        ></div>
         <div
-          className="d-flex align-items-left justify-content-center flex-column"
+          ref={desc.ref}
+          className={`fade-in-element-mid d-flex align-items-left justify-content-center flex-column ${
+            desc.isVisible ? "animate" : ""
+          }`}
           style={{
             height: "100%",
             opacity: isActive ? 1 : 0,
@@ -82,7 +87,7 @@ function NextPrevButton() {
 
           <div>{current.description}</div>
         </div>
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-between">
           <button onClick={prev}>Prev</button>
           <button onClick={next}>Next</button>
         </div>
