@@ -2,3 +2,4 @@ TODO:
 - Fix Contact Scroll: Currently does not scroll to bottom off of click
 - Add CSS to next and Previous Buttons
 - Start on layout for Feat Projects Page
+- Animation doesn't work anymore on the click of the prev and next buttons
