@@ -1,9 +1,4 @@
-What to work on next:
-Contact info
-
-Colors used:
-OffWhite: #F5F5F5
-Blue: #40509d
-
-ideas for body of webpage:
-- 2 panel view, left hand side is a drone shot going through the houses, right side being a slideshow of quotes from past customers.
+TODO:
+- Fix Contact Scroll: Currently does not scroll to bottom off of click
+- Add CSS to next and Previous Buttons
+- Start on layout for Feat Projects Page

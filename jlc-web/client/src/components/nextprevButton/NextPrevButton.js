@@ -69,7 +69,7 @@ function NextPrevButton() {
         ></div>
         <div
           ref={desc.ref}
-          className={`fade-in-element-mid d-flex align-items-left justify-content-center flex-column ${
+          className={`reveal-wrapper fade-in-element-mid d-flex align-items-left justify-content-center flex-column ${
             desc.isVisible ? "animate" : ""
           }`}
           style={{
