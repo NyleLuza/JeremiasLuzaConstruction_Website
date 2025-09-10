@@ -77,9 +77,7 @@ function NextPrevButton() {
           }`}
           style={{
             height: "100%",
-            opacity: isActive ? 1 : 0,
-            transform: isActive ? "translateX(0)" : "translateX(-30px)",
-            transition: "all 0.5s ease",
+            transition: "0.8s",
             maxWidth: "500px",
             margin: "0 auto",
             textIndent: "0",
