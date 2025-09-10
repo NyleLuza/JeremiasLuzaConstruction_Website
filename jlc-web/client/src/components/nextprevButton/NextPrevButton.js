@@ -7,12 +7,15 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import useFadeInOnScroll from "../useFadeInOnScroll.js";
 import "../main.css";
+import prevArrow from "../imgs/button-arrows/left-arrow.png";
+import nextArrow from "../imgs/button-arrows/right-arrow.png";
 
 function NextPrevButton() {
   const desc = useFadeInOnScroll();
   const [houses, setHouses] = useState([]);
   const [isActive, setIsActive] = useState(true);
   const [i, setI] = useState(0);
+
   const current = houses[i] || {
     remodelType: "remodel",
     address: "address",
@@ -87,9 +90,38 @@ function NextPrevButton() {
 
           <div>{current.description}</div>
         </div>
-        <div className="d-flex justify-content-between">
-          <button onClick={prev}>Prev</button>
-          <button onClick={next}>Next</button>
+        <div
+          className="d-flex justify-content-between"
+          style={{
+            paddingLeft: "30px",
+            paddingRight: "30px",
+            paddingBottom: "30px",
+          }}
+        >
+          <button
+            style={{
+              backgroundImage: `URL(${prevArrow})`,
+              backgroundColor: "#FFFFFF",
+              width: "40px",
+              height: "40px",
+              border: "none",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+            onClick={prev}
+          ></button>
+          <button
+            style={{
+              backgroundImage: `URL(${nextArrow})`,
+              backgroundColor: "#FFFFFF",
+              border: "none",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              width: "40px",
+              height: "40px",
+            }}
+            onClick={next}
+          ></button>
         </div>
       </div>
       {/*right hand side for pictures*/}
