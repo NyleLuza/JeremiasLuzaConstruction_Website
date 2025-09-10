@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cc682586.css",
+    "main.js": "/static/js/main.9dd31e4f.js",
+    "static/js/453.2a4b94af.chunk.js": "/static/js/453.2a4b94af.chunk.js",
+    "static/media/simo_rear3.jpg": "/static/media/simo_rear3.2dc45fa869ffa53cdcb7.jpg",
+    "static/media/simo_masterbath1.jpg": "/static/media/simo_masterbath1.8074e0849626b0305cc8.jpg",
+    "static/media/simo_rear1.jpg": "/static/media/simo_rear1.ead5a26590a5472f459b.jpg",
+    "static/media/simo_rear2.jpg": "/static/media/simo_rear2.52c2106c4728b591286c.jpg",
+    "static/media/house1_front.jpg": "/static/media/house1_front.f2980f91274c6ded4699.jpg",
+    "static/media/jerryluza.jpeg": "/static/media/jerryluza.c564e0f1c1f22da59fb6.jpeg",
+    "static/media/logo1rev2rectangle60h.png": "/static/media/logo1rev2rectangle60h.008aac62e8515e5615b1.png",
+    "static/media/instagram.svg": "/static/media/instagram.38d3f8d96a41190bf8394022d6f157c5.svg",
+    "static/media/youtube.svg": "/static/media/youtube.dd25715e034e64e19958563bd6a8632a.svg",
+    "static/media/tiktok.svg": "/static/media/tiktok.e7374810a0c84e06851a1b0c28d9fd0b.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.2986c50c798f86fdd5ec4fbf429eb50a.svg",
+    "index.html": "/index.html",
+    "main.cc682586.css.map": "/static/css/main.cc682586.css.map",
+    "main.9dd31e4f.js.map": "/static/js/main.9dd31e4f.js.map",
+    "453.2a4b94af.chunk.js.map": "/static/js/453.2a4b94af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc682586.css",
+    "static/js/main.9dd31e4f.js"
+  ]
+}
