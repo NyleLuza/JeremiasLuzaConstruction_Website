@@ -69,18 +69,36 @@ function Main() {
       {/* End of First section of the body*/}
       {/* Second section of the body*/}
       <section
-        className="d-flex justify-content-center flex-grow-1"
+        className="d-flex flex-column align-items-center flex-grow-1"
         style={{
           scrollMarginTop: "60px",
           height: "calc(100vh - 60px)",
           color: "black",
           boxShadow: "1px 4px 4px rgba(0,0,0,0.2)",
+          width: "100%",
         }}
       >
-        <h1>Our Services</h1>
+        {/* Header div */}
+        <div className="d-flex ">
+          <h1>Our Services</h1>
+        </div>
+
+        {/* Body Div */}
+        <div
+          className="d-flex flex-grow-1 justify-content-between"
+          style={{
+            width: "inherit",
+            paddingLeft: "30px",
+            paddingRight: "30px",
+          }}
+        >
+          <section>General Remodels</section>
+          <section>New Construction</section>
+          <section>ADU Construction</section>
+        </div>
       </section>
       {/*End of Second section of the body*/}
-      {/* Second section of the body*/}
+      {/* Third section of the body*/}
       <section
         id="about"
         className="d-flex flex-grow-1"
@@ -136,9 +154,9 @@ function Main() {
           </p>
         </div>
       </section>
-      {/*End of Second section of the body*/}
+      {/*End of Third section of the body*/}
 
-      {/*Start of Third section of the body*/}
+      {/*Start of Fourth section of the body*/}
       <section
         id="projects"
         className="d-flex flex-column"
