@@ -1,4 +1,4 @@
-import logo from "../assets/logos/logo1rev2rectangle60h.png";
+import logo from "../assets/logos/logo1new.png";
 import Button from "../button/Button";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
@@ -28,7 +28,7 @@ function Navbar() {
       </section>
       <section
         className="d-flex flex-end navbar "
-        style={{ height: "80%", paddingRight: "40px" }}
+        style={{ height: "80%", paddingRight: "40px", paddingLeft: "30px" }}
       >
         <HashLink smooth to="#home">
           <div className="d-flex">

@@ -67,7 +67,19 @@ function Main() {
         </div>
       </section>
       {/* End of First section of the body*/}
-
+      {/* Second section of the body*/}
+      <section
+        className="d-flex justify-content-center flex-grow-1"
+        style={{
+          scrollMarginTop: "60px",
+          height: "calc(100vh - 60px)",
+          color: "black",
+          boxShadow: "1px 4px 4px rgba(0,0,0,0.2)",
+        }}
+      >
+        <h1>Our Services</h1>
+      </section>
+      {/*End of Second section of the body*/}
       {/* Second section of the body*/}
       <section
         id="about"
