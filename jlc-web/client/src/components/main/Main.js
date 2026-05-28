@@ -1,14 +1,14 @@
-import img from "./imgs/house1_front.jpg";
-import simo_rear1 from "./imgs/simo/simo_rear1.jpg";
-import simo_rear2 from "./imgs/simo/simo_rear2.jpg";
-import simo_rear3 from "./imgs/simo/simo_rear3.jpg";
-import simo_masterbath1 from "./imgs/simo/simo_masterbath1.jpg";
-import pops from "./imgs/jerryluza.jpeg";
-import BodyButton from "./bodyButton/BodyButton";
+import img from "../assets/imgs/house1_front.jpg";
+import simo_rear1 from "../assets/imgs/simo/simo_rear1.jpg";
+import simo_rear2 from "../assets/imgs/simo/simo_rear2.jpg";
+import simo_rear3 from "../assets/imgs/simo/simo_rear3.jpg";
+import simo_masterbath1 from "../assets/imgs/simo/simo_masterbath1.jpg";
+import pops from "../assets/imgs/jerryluza.jpeg";
+import BodyButton from "../bodyButton/BodyButton.js";
 import { Navigate, useNavigate } from "react-router-dom";
-import NextPrevButton from "./nextprevButton/NextPrevButton";
-import "./main.css";
-import useFadeInOnScroll from "./useFadeInOnScroll.js";
+import NextPrevButton from "../nextprevButton/NextPrevButton.js";
+import "../styles/main.css";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll.js";
 
 function Main() {
   const nav = useNavigate();
@@ -95,14 +95,13 @@ function Main() {
         </div>
         <div
           ref={about.ref}
-          className={`fade-in-element-right d-flex flex-grow-1 flex-column align-items-center justify-content-center ${
+          className={`fade-in-element-right d-flex flex-grow-1 flex-column  justify-content-center ${
             about.isVisible ? "animate" : ""
           }`}
+          style={{ width: "60vh" }}
         >
-          <h2>Jeremias Luza</h2>
-          <div style={{ maxWidth: "550px", textAlign: "center" }}>
-            Licensed contractor and civil engineer (in the Philippines)
-          </div>
+          <h2>Meet Your General Contractor</h2>
+          <div>Jeremias Luza</div>
           <p
             className="d-flex"
             style={{
@@ -112,7 +111,6 @@ function Main() {
               maxWidth: "500px",
               fontSize: "15px",
               color: "black",
-              textAlign: "center",
             }}
           >
             Over 20 years of experience in residential and multi-family

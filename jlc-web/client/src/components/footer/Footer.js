@@ -1,10 +1,10 @@
-import ContactForm from "./contactForm/ContactForm";
-import logo from "./logos/logo3rev.png";
-import instaLogo from "./logos/instagram.svg";
-import linkedinLogo from "./logos/linkedin.svg";
-import tiktokLogo from "./logos/tiktok.svg";
-import youtubeLogo from "./logos/youtube.svg";
-import SocialIcon from "./socialIcon/SocialIcon";
+import ContactForm from "../contactForm/ContactForm";
+import logo from "../assets/logos/logo3rev.png";
+import instaLogo from "../assets/logos/instagram.svg";
+import linkedinLogo from "../assets/logos/linkedin.svg";
+import tiktokLogo from "../assets/logos/tiktok.svg";
+import youtubeLogo from "../assets/logos/youtube.svg";
+import SocialIcon from "../socialIcon/SocialIcon";
 function Footer() {
   return (
     <footer

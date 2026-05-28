@@ -5,10 +5,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import useFadeInOnScroll from "../useFadeInOnScroll.js";
-import "../main.css";
-import prevArrow from "../imgs/button-arrows/left-arrow.png";
-import nextArrow from "../imgs/button-arrows/right-arrow.png";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll.js";
+import "../styles/main.css";
+import prevArrow from "../assets/imgs/button-arrows/left-arrow.png";
+import nextArrow from "../assets/imgs/button-arrows/right-arrow.png";
 
 function NextPrevButton() {
   const desc = useFadeInOnScroll();
