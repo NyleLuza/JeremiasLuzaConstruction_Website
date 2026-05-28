@@ -14,26 +14,27 @@ function Navbar() {
       }}
     >
       <section
-        className="d-flex end"
+        className="d-flex align-items-center"
         style={{
-          height: "20%",
+          minHeight: "20px",
           width: "100%",
           backgroundColor: "rgb(64, 80, 157)",
+          fontSize: "10px",
           color: "#ffffff",
+          paddingLeft: "60px",
         }}
       >
-        License #
+        <div>License #107615</div>
       </section>
       <section
-        className="d-flex flex-end px-5 navbar "
-        style={{ height: "80%" }}
+        className="d-flex flex-end navbar "
+        style={{ height: "80%", paddingRight: "40px" }}
       >
         <HashLink smooth to="#home">
           <div className="d-flex">
             <img src={logo} />
           </div>
         </HashLink>
-
         <div className="d-flex justify-content-end flex-grow-1 gap-3">
           <HashLink smooth to="#home">
             <Button label="Home" />
